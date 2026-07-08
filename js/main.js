@@ -72,7 +72,23 @@ function initGallery() {
   });
 }
 
+function initBgCollage() {
+  const container = document.getElementById("bg-collage");
+  if (!container) return;
+
+  const photos = typeof PHOTOS !== "undefined" ? PHOTOS : [];
+  photos.forEach((name) => {
+    const img = document.createElement("img");
+    img.src = "images/" + name;
+    img.alt = "";
+    img.className = "bg-photo";
+    img.onerror = () => { img.style.display = "none"; };
+    container.appendChild(img);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initBgCollage();
   initDaysCounter();
   initParticles();
   initGallery();
