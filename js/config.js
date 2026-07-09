@@ -3,7 +3,7 @@
 // 在一起的日期（用于计算天数），格式：年, 月-1, 日（月份从 0 开始）
 // 例如 2024年3月15日 → new Date(2024, 2, 15)
 // 一周年纪念日：2025年7月9日在一起
-const TOGETHER_SINCE = new Date(2025, 6, 9);
+const TOGETHER_SINCE = new Date(2025, 6, 10);
 
 // 合照文件名列表（把照片放进 love-520/images/ 文件夹）
 const PHOTOS = [
